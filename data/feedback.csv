@@ -1,1 +1,10 @@
-id,name,email,message,votes
+id,name,email,message,votes,id_user
+dbfa8a2f-79df-4ad8-b903-59447313f4ba,Saahil Fernandes,saahil@example.com,"very amazing
+",2,216357a8-c868-4459-bf75-7360f8a4cdc2
+509fa538-c5fa-40a2-95bf-8820150b3d40,Unit,unit@gmail.com,very cool,1,2f4055b4-456f-4d70-8a7a-32edca988921
+946d4351-7b2d-4c37-b180-b9df2386754a,Saahil Fernandes,saahil@example.com,super impressed,1,216357a8-c868-4459-bf75-7360f8a4cdc2
+2da98e69-3ff6-4659-bfa4-2e7cdd3cb6a7,Saahil Fernandes,saahil@example.com,"amazing job
+",1,216357a8-c868-4459-bf75-7360f8a4cdc2
+f5c97ea6-adb6-49f0-bd04-7042487a6e9d,test2,test2@gmail.com,"A good positive review includes: · Specific unbiased details, · Mention relevant products, services, or brands by name, · A clear recommendation and personal experience, · Detailed insights, including features, pros, cons, and comparison with similar products.",2,94002f3a-97de-4736-97c3-a43718643702
+d03350d6-6c28-4ba6-8c4d-e750c5eb8201,test1,test1@gmail.com,"amazing
+",1,bbf11d02-a4a8-4983-8ab1-70aede280d73

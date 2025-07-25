@@ -1,3 +1,4 @@
+// backend/routes/auth.js
 const express = require('express');
 const router = express.Router();
 const { readCsv, writeCsv } = require('../utils/csvHandler');
@@ -22,16 +23,21 @@ router.post('/signup', async (req, res) => {
     id: uuidv4(),
     name,
     email,
-    password // plaintext
+    password // plaintext (for this example, in real apps use hashed passwords)
   };
 
   users.push(newUser);
   await writeCsv(USERS_FILE, users);
 
-  res.status(201).json({ message: 'Signup successful', userId: newUser.id });
+  res.status(201).json({
+    message: 'Signup successful',
+    userId: newUser.id,
+    name: newUser.name, // <--- ADD THIS LINE
+    email: newUser.email // <--- ADD THIS LINE
+  });
 });
 
-// POST /auth/login
+// POST /auth/login (already correct)
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -45,7 +51,7 @@ router.post('/login', async (req, res) => {
     return res.status(401).json({ error: 'Invalid email or password' });
   }
 
-  res.json({ message: 'Login successful', userId: user.id, name: user.name });
+  res.json({ message: 'Login successful', userId: user.id, name: user.name, email: user.email});
 });
 
 module.exports = router;
